@@ -1,12 +1,26 @@
 import "./App.css";
-import Child from "./Child";
 
 function App() {
-  return (
+  const jsx = (
     <>
-      <div>안녕하세요</div>
-      <Child isShow={true} />
+      <div>
+        <ul>
+          <li>안녕하세요</li>
+          <li>남현준입니다.</li>
+        </ul>
+        <button>확인</button>
+      </div>
     </>
+  );
+  console.log("virtualDom", jsx);
+  return (
+    <div>
+      <ul>
+        <li>안녕하세요</li>
+        <li>남현준입니다.</li>
+      </ul>
+      <button>확인</button>
+    </div>
   );
 }
 
