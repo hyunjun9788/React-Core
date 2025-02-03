@@ -1,27 +1,18 @@
 import "./App.css";
+import Button from "./Button.jsx";
+import Child from "./Child.jsx";
 
 function App() {
-  const jsx = (
-    <>
-      <div>
-        <ul>
-          <li>안녕하세요</li>
-          <li>남현준입니다.</li>
-        </ul>
-        <button>확인</button>
-      </div>
-    </>
-  );
-  console.log("virtualDom", jsx);
   return (
     <div>
       <ul>
-        <li>안녕하세요</li>
-        <li>남현준입니다.</li>
+        <li key="1">안녕하세요</li>
+        <li key="2">남현준입니다.</li>
       </ul>
-      <button>확인</button>
+      <Button />
+      <Child />
     </div>
   );
 }
-
+console.log(JSON.stringify(App(), null, 2));
 export default App;
